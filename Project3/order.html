@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition  v 1.16
+      Individual Project Template
+      Author: Casey Smith
+      Date: 09/30/2016
+      Filename: order.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+   <title>Travel Times</title>
+   <link rel="stylesheet" media="screen and (max-device-width: 999px)" href="projhand.css" />
+   <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="project.css" />
+   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'> 
+</head>
+
+<body class="stdBody">
+      <!--navbar-->
+      <orderNav>
+         <a href="home.html">Home</a>
+         <a href="location1.html">Ireland</a>
+         <a href="location2.html">Greece</a>
+         <a href="location3.html">Iceland</a>
+         <a class="active" href="#order">Order</a>
+      </orderNav>
+      <!--navbar-->
+
+   <div id="contentContainer">
+   <!--contains main paragraph section of the order page, explaining what you can order-->
+
+   <img src="images/italianherbs.jpg" alt="italianherbs" class="planeViews" align="left"> <br>
+   <!--Picture on order page-->
+   <br>
+   <div class="orderContainerText">
+      <!--description on the order page near the picture-->
+      <h2>Order a Travel Photo!</h2>
+      <center>You can now order the displayed picture (left) on this webpage.</center><br><br>
+      <u>Photo description</u> <br>
+      Date: last week of June 2016<br>
+      Location: side street - Rome, Italy. <Br>
+      Credit: Casey Smith<br><br>
+      <br>
+      Please select all photo sizes that suit you and click submit.<Br>
+      <br>
+      <br>
+      <!--Form that shows items that user can check to purchase-->
+      <!--Form also includes dynamically allocated values for product listing-->
+         <form>
+         <input type="checkbox" id="item1"  value="8"/> 
+            <li></li>
+         <input type="checkbox" id="item2" value="9" />
+            <li></li>
+         <input type="checkbox" id="item3" value="8" />
+            <li></li>  
+         <input type="checkbox" id="item4" value="13" />
+            <li></li>  
+         <input type="checkbox" id="item5" value="6" />
+            <li></li>  <br>
+         <input type="submit" id="submit" value="Submit" />
+      </form>
+     <!--END OF FORM -->
+
+   </div>
+
+ 
+      <footer>
+         <p>Summer Sixteen &bull; Travel Times &bull; September 2016</p>
+      </footer>
+   
+   </div>
+    
+<!--Function to calculate the total of the order, based on selected items from the form-->
+<script>
+      function calcTotal() {
+         var itemTotal = 0;
+         var item1 = document.getElementById("item1");
+         var item2 = document.getElementById("item2");
+         var item3 = document.getElementById("item3");
+         var item4 = document.getElementById("item4");
+         var item5 = document.getElementById("item5");
+         (item1.checked) ? (itemTotal += 1) : (itemTotal += 0);
+         (item2.checked) ? (itemTotal += 2) : (itemTotal += 0);
+         (item3.checked) ? (itemTotal += 5) : (itemTotal += 0);
+         (item4.checked) ? (itemTotal += 8) : (itemTotal += 0);
+         (item5.checked) ? (itemTotal += 9) : (itemTotal += 0);
+         var salesTaxRate = 0.06;
+         var orderTotal = itemTotal + (itemTotal * salesTaxRate);
+         if (itemTotal!=0){
+         alert("Your order subtotal is $" + itemTotal + "\nYour total amount due is $" + orderTotal + "\nThank you!");
+         }//if statement to make sure the total is greater than 0
+         else
+         alert("You did not select anything!\nPlease make a valid selection.");
+         } //else statement in case the user didn't check a box.
+      document.getElementById("submit").addEventListener("click", calcTotal, false);
+
+
+      //replaces the static list of products. Array holds the values to output
+      var products = ["Standard ($1.00 +tax) &emsp;&emsp;&emsp;&emsp;&emsp; 4&quot;x6&quot;", "Standard Portrait ($2.00 +tax) &emsp; 8&quot;x10&quot;", "Small Poster ($5.00 +tax)&emsp;&emsp;&emsp;&emsp;11&quot;x14&quot;", "Medium Poster ($8.00 +tax)&emsp;&emsp;&emsp;18&quot;x24&quot;", "Large Poster ($9.00 +tax)&emsp;&emsp;&emsp;&emsp;24&quot;x36&quot;"];
+    //^global variable, array of names of products
+    function processproducts() { 
+      for (var i = 0; i < 5; i++) { //FOR LOOP
+        var listItem = "item" + (i + 1);
+        document.getElementsByTagName("li")[i].innerHTML += products[i];  
+      } 
+    }
+    if (window.addEventListener) {
+      window.addEventListener("load", processproducts, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", processproducts);
+    } //if statement runs the function when the window finishes loading.
+   </script>
+
+</body>
+</html>

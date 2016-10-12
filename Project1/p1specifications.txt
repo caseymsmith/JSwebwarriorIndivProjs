@@ -1,0 +1,5 @@
+For this project, you will concentrate on developing your HTML5 and CSS3 skills to create a website that you will enhance with additional software features as we progress through the course material.  To begin, choose a topic for your website which can be a virtual storefront, a personal interest or activity.  In this first iteration, you will begin with the Student Project Template and perform the following:
+-Add a total of four pages that can be accessed from the common navigation bar (e.g., Home, Products, Orders, About).  Make sure that the file names reflect the page content.
+-Using CSS3, develop a standard color scheme/"look" for your pages with a common logo and style.  Do not simply adopt the color scheme in the template files.
+-Embellish your landing page with data content and rich media.
+-Add HTML comments to your files that reflect your changes.

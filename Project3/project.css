@@ -1,0 +1,272 @@
+/*  JavaScript 6th Edition v 1.16
+ 
+    Large format style sheet
+
+    Filename: project.css
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+   -moz-box-sizing: border-box;
+   -webkit-box-sizing: border-box;
+   box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, orderNav, output, ruby, section, summary,
+time, mark, audio, video, contentContainer {
+   margin: 0;
+   padding: 0;
+   border: 0;
+   font-size: 100%;
+   font: inherit;
+   vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, orderNav, section {
+   display: block;
+}
+
+/*standard body styling*/
+body {
+   line-height: 1;
+   width: 960px;
+   margin: 0 auto;
+   font-family: Verdana, Geneva, sans-serif; 
+   position: relative;
+}
+
+/*page background colors*/
+.stdBody{
+  background: #CBECF5;
+}
+
+
+.location1 {
+  background: #B8F2BD;
+}
+
+.location2 {
+  background: #F0ECCE;
+}
+
+.location3 {
+  background: #EEE4F2;
+}
+
+ol {
+   list-style: none;
+}
+
+blockquote, q {
+   quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+   content: '';
+   content: none;
+}
+
+table {
+   border-collapse: collapse;
+   border-spacing: 0;
+}
+
+a:link, a:visited {
+   text-decoration: none;
+   color: EFE0B9;
+}
+
+a:hover {
+   text-decoration: bold;
+   color: #000000;
+}
+
+a:active {
+   text-decoration: none;
+   color: inherit;
+}
+
+/* container */
+.contentContainer {
+   background: #FFFFF;
+   text-align: center;
+}
+
+h2 {
+   font-size: 1.2em;
+   font-weight: bold;
+   text-align: center;
+   margin-bottom: 6px;
+}
+
+/*page text containers styled to make things on page fit accordingly*/
+.homeContainerText{
+   margin-left: 10%;
+   margin-top: 10%;
+   text-align: center;
+   width: 50%;
+}
+
+.orderContainerText{
+   margin-left: 35%;
+   
+   text-align: left;
+   width: 60%;
+
+}
+
+form{
+ margin-left: 10px;
+}
+
+.locationContainerText{
+   text-align: center;
+}
+
+.location2containerText{
+   margin-top: 10%;
+}
+.location3containerText{
+  text-align: center;
+}
+
+/* page header */
+header {
+   background: white;
+   font-size: 48px;
+   float: left;
+}
+
+/* form  styling*/
+form {
+   margin: 0 auto;
+   width: 70%;
+}
+
+input {
+   float: right;
+   clear: right;
+   margin: 5px;
+}
+
+label {
+   float: left;
+}
+
+#submit{
+   background-color: #000000;
+    border: none;
+    color: white;
+    padding: 10px 30px;
+
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+#submit:hover{
+     text-decoration: bold;
+   color: #00ffff;
+}
+
+
+/* order page navigation because of dynamic product list*/
+orderNav{
+list-style-type: none;
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    margin: 0 auto;
+    position: relative;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+orderNav a{
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+orderNav a:hover:not(.active) {
+    background-color: #FFFFFF;
+}
+
+orderNav .active {
+    background-color: #7E8787;
+}
+
+
+/*navigation from all pages except order page*/
+ul {
+    list-style-type: none;
+    overflow: hidden;
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+
+li{
+   float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #FFFFFF;
+}
+
+.active {
+    background-color: #7E8787;
+}
+
+/*photo styling*/
+.planeViews{
+   width: 300px;
+   height: auto; 
+}
+
+.location3imgs{
+  width: 300px;
+   height: auto; 
+  text-align: left;
+}
+
+/* footer */
+footer {
+   background: white;
+   width: 100%;
+   clear: both;
+   font-size: 14px;
+   padding: 10px;
+}
+
+footer p {
+   text-align: center;
+}

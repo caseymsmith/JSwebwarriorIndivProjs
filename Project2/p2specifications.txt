@@ -1,0 +1,5 @@
+For this project iteration, use the Hands-On Project 2-4 as a template for creating an "order" page for your website.  At a minimum you should have 4 products with individual prices (as an alternative, you could have a range of prices for a single project that has variations, such as Small, Medium, Large, Extra-Large).
+
+The user should be able to make multiple selections and click a submit button.  Calculate a subtotal, sales tax (6%) and total amount due for the order.  The calculated totals can appear in an alert box, or you can display them directly on your webpage.
+
+As always, your calculations and modifications should be documented in your project with meaningful comments.

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <!--
+      JavaScript 6th Edition  v 1.16
+      Individual Project 
+      Author: Casey Smith
+      Date: 09/20/2016
+      Filename: order.html
+   -->
+   <meta charset="utf-8" />
+   <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0">
+   <title>Travel Times</title>
+   <link rel="stylesheet" media="screen and (max-device-width: 999px)" href="projhand.css" />
+   <link rel="stylesheet" media="screen and (min-device-width: 1000px)" href="project.css" />
+   <link href='https://fonts.googleapis.com/css?family=Indie+Flower' rel='stylesheet' type='text/css'> 
+</head>
+
+<body class="stdBody">
+   <header>
+      <h1>
+         Hands-on Project 3-3
+      </h1>
+   </header>
+
+      <h2>Scouting Locations</h2>
+   
+             <li id="item1"></li><br>
+             <li id="item2"></li><br>
+             <li id="item3"></li><br>
+             <li id="item4"></li><br>
+             <li id="item5"></li>
+  
+
+   <script>
+    var places = ["Maryland", "North Carolina", "Maine", "Colorado", "Texas"];
+    //^global variable, array of names of places
+    function processPlaces() {
+      for (var i = 0; i < 5; i++) {
+        var listItem = "item" + (i + 1);
+        document.getElementsByTagName("li")[i].innerHTML += places[i];  
+      } 
+    }
+    if (window.addEventListener) {
+      window.addEventListener("load", processPlaces, false);
+    } else if (window.attachEvent) {
+      window.attachEvent("onload", processPlaces);
+    } //if statement runs the function when the window finishes loading.
+  </script>
+</body>
+</html>
